@@ -1,4 +1,4 @@
-POST https://animediary-backend-imdnu3xz5-bibhutis-projects-bfa6b876.vercel.app/pages/api/userapi
+POST https://animediary-backend.vercel.app/pages/api/userapi
 Content-Type: application/json
 
 {
