@@ -5,6 +5,7 @@ export async function POST(request) {
   const headers = {
     "Access-Control-Allow-Origin": "*", // For all origins, but ideally restrict to your app's URL in production
     "Access-Control-Allow-Methods": "POST,GET,DELETE",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
     "Content-Type": "application/json",
   };
 
