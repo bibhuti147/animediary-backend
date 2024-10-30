@@ -10,9 +10,7 @@ export async function POST(request) {
   };
 
   try {
-    const sql = neon(
-      "postgresql://AnimeDiaryDB_owner:Aqs2i6zoSNwl@ep-proud-sea-a1ch95mu.ap-southeast-1.aws.neon.tech/AnimeDiaryDB?sslmode=require"
-    );
+    const sql = neon(`${process.env.NEXT_PUBLIC_DATABASE_URL}`);
     const { name, profileurl, email, clerkId } = await request.json();
 
     if (!name || !profileurl || !email || !clerkId) {
