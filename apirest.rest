@@ -1,9 +1,8 @@
-POST https://animediary-backend-g40v2foet-bibhutis-projects-bfa6b876.vercel.app/pages/api/userapi
+POST https://animediary-backend-lyxxwxsek-bibhutis-projects-bfa6b876.vercel.app/pages/api/userapi
 Content-Type: application/json
 
 {
   "name": "Test User",
   "profileurl": "https://example.com/profile.jpg",
-  "email": "testuser@example.com",
-  "clerkId": "123456"
+  "email": "testuser@example.com"
 }
