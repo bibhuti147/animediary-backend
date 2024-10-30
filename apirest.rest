@@ -1,0 +1,9 @@
+POST https://animediary-backend-ht137spwt-bibhutis-projects-bfa6b876.vercel.app/api/userapi
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "profileurl": "https://example.com/profile.jpg",
+  "email": "testuser@example.com",
+  "clerkId": "123456"
+}
