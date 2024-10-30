@@ -1,6 +1,13 @@
 import { neon } from "@neondatabase/serverless";
 
 export async function POST(request) {
+  // Set up CORS headers
+  const headers = {
+    "Access-Control-Allow-Origin": "*", // For all origins, but ideally restrict to your app's URL in production
+    "Access-Control-Allow-Methods": "POST",
+    "Content-Type": "application/json",
+  };
+
   try {
     const sql = neon(`${process.env.NEXT_PUBLIC_DATABASE_URL}`);
     const { name, profileurl, email, clerkId } = await request.json();
@@ -27,9 +34,15 @@ export async function POST(request) {
     )
     `;
 
-    return new Response(JSON.stringify({ data: response }), { status: 201 });
+    return new Response(JSON.stringify({ data: response }), {
+      status: 201,
+      headers,
+    });
   } catch (error) {
     console.log(error);
-    return new Response(JSON.stringify({ error: error }), { status: 500 });
+    return new Response(JSON.stringify({ error: error }), {
+      status: 500,
+      headers,
+    });
   }
 }
