@@ -1,6 +1,8 @@
 import { neon } from "@neondatabase/serverless";
 
-export async function GET(request, { auid }) {
+export async function GET(request, { params }) {
+  const { auid } = params;
+
   if (!auid) {
     return Response.json({ error: "Missing required fields" }, { status: 400 });
   }
